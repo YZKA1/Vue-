@@ -2,6 +2,7 @@
 import Vue from 'vue'
 // 导入路由的包
 import VueRouter from 'vue-router'
+import moment from 'moment'
 // 安装路由
 Vue.use(VueRouter)
 
@@ -19,6 +20,12 @@ Vue.http.options.root = 'http://www.lovegf.cn:8899/'
 import './lib/mui/css/mui.min.css'
 // 导入扩展图标样式
 import './lib/mui/css/icons-extra.css'
+
+// 定义全局过滤器
+Vue.filter('dateFormat', function(dateStr, pattern = 'YYYY-MM-DD HH:mm:ss') {
+  // 直接调用表示获取当前时间
+  return moment(dateStr).format(pattern)
+})
 
 // 导入Mint-UI 中的组件
 
