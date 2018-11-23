@@ -9,8 +9,11 @@ Vue.use(VueRouter)
 
 import VueResource from 'vue-resource'
 
-// 安装 vue-resource
+// 注册 vue-resource
 Vue.use(VueResource)
+
+// 配置vue-resource的请求根域名
+Vue.http.options.root = 'http://www.lovegf.cn:8899/'
 
 // 导入 MUI 的样式
 import './lib/mui/css/mui.min.css'
