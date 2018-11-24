@@ -46,8 +46,8 @@ export default {
 </script>
 
 <style lang="less">
-.new-list-container{
-    padding-top:50px;
+.news-list-container{
+     padding-top:50px;
     .mui-table-view{
         li{
             h1{
